@@ -1,31 +1,31 @@
-def greet():
-    print("Hello! I'm your chatbot. How can I help you today?")
+def greetings():
+    print("Hello! I'm chatbot. How can I help you?")
 
-def respond(response):
-    response = response.lower()
+def respond(u_i):
+    u_i = u_i.lower()
 
-    if "hello" in response or "hi" in response:
-        return "Hi there! How can I assist you?"
-    elif "how are you" in response:
+    if "hello" in u_i or "hi" in u_i:
+        return "Hello there! How can I help you?"
+    elif "how are you" in u_i:
         return "I'm just a computer program, but I'm doing well. Thanks for asking!"
-    elif ("what is your name"  or "what is your name?") or ("who are you?" or "who are you") in response:
-        return "hii i am somuuuunnnnn "
-    elif "for what purpose you have build?" in response:
-        return "for codealpha internship project i had build"
-    elif "bye" in response or "goodbye" in response:
+    elif "what is your name?" in u_i or "who are you?" in u_i:
+        return "Hello! I am ChatBot."
+    elif "what do you do?" in u_i or "what is your job?" in u_i or "what is your work?" in u_i:
+        return "For the CodeAlpha internship project, I have been built."
+    elif "bye" in u_i or "goodbye" in u_i:
         return "Goodbye! Have a great day!"
     else:
         return "I'm sorry, I don't understand that. Can you please ask me something else?"
 
 if __name__ == "__main__":
-    greet()
+    greetings()
 
     while True:
-        response = input("You: ")
+        u_i = input("You: ")
         
-        if response.lower() == 'exit':
+        if u_i.lower() == 'exit':
             print("Chatbot: Goodbye! Have a great day.")
             break
 
-        responsed = respond(response)
-        print("Chatbot:", responsed)
+        response = respond(u_i)
+        print("Chatbot:", response)
